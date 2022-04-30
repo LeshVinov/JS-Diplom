@@ -4,7 +4,6 @@ const slider = () => {
 
     let currentSlide = 0
 
-    console.log('dsadsa');
     const checkForInnerWidth = () => {
             benefitItems.forEach((benefitItem, i) => {
                 if (window.innerWidth >= 576) {
