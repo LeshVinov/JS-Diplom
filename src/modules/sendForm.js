@@ -57,15 +57,18 @@ const sendForm = ({ formId, someElem = [] }) => {
             formBody[key] = val
         })
 
-        // someElem.forEach(elem => {
-        //     const element = document.getElementById(elem.id)
-        //     if (elem.type === 'block') {
-        //         formBody[elem.id] = element.textContent
-        //     } 
-        //     // else if (elem.type === 'input') {
-        //     //     formBody[elem.id] = element.value
-        //     // }
-        // })
+        
+        someElem.forEach(elem => {
+            const element = document.getElementById(elem.id)
+            if(element == null) {
+                console.log('Верните блок!');
+            } else {
+                if (elem.type === 'block') {
+                    formBody[elem.id] = element.value
+                }
+            }
+            
+        })
 
         if (validate(formElements)) {
             sendData(formBody)
