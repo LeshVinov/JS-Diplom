@@ -7,9 +7,11 @@ import burger from "./modules/burger"
 import sendForm from "./modules/sendForm"
 import docsModal from "./modules/docsModal"
 import calculator from "./modules/calculator"
+import secondSlider from "./modules/secondSlider"
 
 modal()
 slider()
+secondSlider()
 scroll()
 burger()
 // formValidate()

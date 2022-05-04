@@ -49,14 +49,6 @@ const slider = () => {
                     }
                 })
             }
-            // if (e.target.closest('.benefits__arrow--right')) {
-            //     prevSlide(benefitItems, currentSlide, 'not-active')
-            //     currentSlide = currentSlide + 2
-            //     nextSlide(benefitItems, currentSlide, 'not-active')
-            
-            // } else if (e.target.closest('.benefits__arrow--left')) {
-            //     currentSlide - currentSlide + 3      
-            // }
         } else {
             prevSlide(benefitItems, currentSlide, 'not-active')
 
