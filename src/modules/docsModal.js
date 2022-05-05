@@ -1,13 +1,9 @@
-import modal from "./modal";
-
 const docsModal = () => {
     const overlay = document.querySelector('.overlay')
     const body = document.querySelector('body')
 
     const imgs = document.querySelectorAll('.sertificate-document');
     const disableImgAttributes = document.querySelectorAll('.sertificate-document')
-    const modalImg = document.querySelector(".sertificate-document > .img-responsive")
-    const modalImgAttr = modalImg.getAttribute('src')
 
     const hoverEffectImgs = document.querySelectorAll('.document-overlay')
 
