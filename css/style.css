@@ -518,7 +518,7 @@ input.error {
 }
 .modal-img {
   z-index: 99;
-  position: absolute;
+  position: fixed;
   top: 2%;
   left: 33%;
   background: url(../images/documents/original/document4.jpg) center / cover;

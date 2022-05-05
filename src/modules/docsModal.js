@@ -1,5 +1,8 @@
+import modal from "./modal";
+
 const docsModal = () => {
     const overlay = document.querySelector('.overlay')
+    const body = document.querySelector('body')
 
     const imgs = document.querySelectorAll('.sertificate-document');
     const disableImgAttributes = document.querySelectorAll('.sertificate-document')
@@ -24,20 +27,31 @@ const docsModal = () => {
     disableImgAttributes.forEach(disableImgAttributes => {
         disableImgAttributes.setAttribute('href', '')
     })
-    
+
+    const addModalDocument = () => {
+        overlay.style.display = "block";
+        const modalDiv = document.createElement('div')
+        modalDiv.classList.add('modal-img')
+        body.append(modalDiv)
+        modalDiv.innerHTML = `
+        <span title="Close" class="header-modal__close">x</span>
+        `
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.overlay') || e.target.closest(".header-modal__close")) {
+                modalDiv.remove()
+            }
+            
+        })
+    }
+
     imgs.forEach(imgDiv => {
-        
         imgDiv.addEventListener('click', (e) => {
             e.preventDefault()            
-            overlay.style.display = "block";
-            const modalDiv = document.createElement('div')
-            modalDiv.classList.add('modal-img')
-            // modalDiv.style.background = `url(./${modalImgAttr}) no-repeat center / cover`
-            overlay.append(modalDiv)
-            console.log(modalDiv);
+            addModalDocument()
         })
     })
 
+    
 }
 
 export default docsModal
