@@ -15,42 +15,24 @@ secondSlider()
 scroll()
 burger()
 // formValidate()
-timer('05 may 2022')
+timer('15 may 2022')
 docsModal()
 calculator()
-sendForm({
-    formId: '[name = "action-form"]', 
-    someElem: [
-        {
-            type: 'block',
-            id: 'calc-total'
-        }
-    ] 
-})
-sendForm({
-    formId: '[name = "action-form2"]', 
-    someElem: [
-        {
-            type: 'block',
-            id: 'calc-total'
-        }
-    ] 
-})
-sendForm({
-    formId: '[name = "callback-form"]', 
-    someElem: [
-        {
-            type: 'block',
-            id: 'calc-total'
-        }
-    ] 
-})
-sendForm({
-    formId: '[name = "application-form"]', 
-    someElem: [
-        {
-            type: 'block',
-            id: 'calc-total'
-        }
-    ] 
+
+const forms = document.querySelectorAll('form')
+forms.forEach((form, index) => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        form.id = `form${index}`
+        
+        sendForm({
+            formId: `form${index}`,
+            someElem: [
+                {
+                    type: 'block',
+                    id: 'calc-total'
+                }
+            ] 
+        })
+    })
 })

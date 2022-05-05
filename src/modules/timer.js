@@ -48,7 +48,7 @@ const timer = (deadline) => {
             timerDays.textContent = getTime.days
         })
         timerHours.forEach(timerHours => {
-            timerHours.textContent = getTime.hoursgit
+            timerHours.textContent = getTime.hours
         })
         timerMinutes.forEach(timerMinutes => {
             timerMinutes.textContent = getTime.minutes

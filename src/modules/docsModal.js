@@ -28,7 +28,7 @@ const docsModal = () => {
         img.addEventListener('click', (e) => {
             e.preventDefault()
             overlay.style.display = "block";
-            modalImg.style.display = "block"
+            document.createElement('div')
         })
     })
 
