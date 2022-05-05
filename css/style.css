@@ -516,6 +516,16 @@ input.error {
 .bank-img-hover {
   display: none;
 }
+.modal-img {
+  z-index: 99;
+  position: absolute;
+  top: 2%;
+  left: 33%;
+  background: url(../images/documents/original/document4.jpg) center / cover;
+  width: 654px;
+  height: 900px;
+
+}
 .modal-bank {
   color: #4f686e;
 }

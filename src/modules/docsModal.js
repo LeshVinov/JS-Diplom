@@ -1,9 +1,10 @@
 const docsModal = () => {
     const overlay = document.querySelector('.overlay')
 
-    const imgs = document.querySelectorAll('.document-overlay');
+    const imgs = document.querySelectorAll('.sertificate-document');
     const disableImgAttributes = document.querySelectorAll('.sertificate-document')
-    const modalImg = document.querySelector(".sertificate-document > .img-responsive");
+    const modalImg = document.querySelector(".sertificate-document > .img-responsive")
+    const modalImgAttr = modalImg.getAttribute('src')
 
     const hoverEffectImgs = document.querySelectorAll('.document-overlay')
 
@@ -24,11 +25,16 @@ const docsModal = () => {
         disableImgAttributes.setAttribute('href', '')
     })
     
-    imgs.forEach(img => {
-        img.addEventListener('click', (e) => {
-            e.preventDefault()
+    imgs.forEach(imgDiv => {
+        
+        imgDiv.addEventListener('click', (e) => {
+            e.preventDefault()            
             overlay.style.display = "block";
-            document.createElement('div')
+            const modalDiv = document.createElement('div')
+            modalDiv.classList.add('modal-img')
+            // modalDiv.style.background = `url(./${modalImgAttr}) no-repeat center / cover`
+            overlay.append(modalDiv)
+            console.log(modalDiv);
         })
     })
 
