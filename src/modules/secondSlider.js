@@ -1,4 +1,4 @@
-const two = () => {
+const secondSlider = () => {
     const serviceCards = document.querySelectorAll('.col-md-12.col-lg-6');
     const serviceContent = document.getElementById('services')
     
@@ -70,4 +70,4 @@ const two = () => {
 
 
 }
-export default two
+export default secondSlider
