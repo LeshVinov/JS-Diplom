@@ -13,13 +13,13 @@ const sendForm = ({ formId, someElem = [] }) => {
                 if (input.value === '') {
                     success = false
                 } else if (input.value.match(/[^а-яА-Я\^a-zA-Z\s]/g)) {
-                    success = true
+                    success = false
                 }
             } else if (input.name == 'phone') {
                 if (input.value === '') {
                     success = false
                 } else if (input.value.match(/[^0-9\(\)\+\-]/g)) {
-                    success = true
+                    success = false
                 }
             } 
         })
@@ -81,6 +81,9 @@ const sendForm = ({ formId, someElem = [] }) => {
         } else {
             alert('Поля заполнены неверно!')
             statusBlock.textContent = errorText
+            setTimeout(() => {
+                statusBlock.remove()
+            }, 2000)
         }
     }
 
