@@ -82,7 +82,7 @@ const timer = (deadline) => {
     }
     intervalID = setInterval(() => {
         updateClock()
-    }, 1000);
+    }, 700);
 }
 
 

@@ -8,6 +8,7 @@ import sendForm from "./modules/sendForm"
 import docsModal from "./modules/docsModal"
 import calculator from "./modules/calculator"
 import secondSlider from "./modules/secondSlider"
+import comments from "./modules/comments"
 
 modal()
 slider()
@@ -18,6 +19,7 @@ burger()
 timer('15 may 2022')
 docsModal()
 calculator()
+comments()
 
 const forms = document.querySelectorAll('form')
 forms.forEach((form, index) => {

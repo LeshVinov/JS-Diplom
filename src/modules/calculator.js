@@ -26,7 +26,7 @@ const calculator = () => {
         total.value = totalValue
     }
     if (calcBlock == null) {
-        console.log('блока с калькулятором нет!');
+        return
     } else {
         calcBlock.addEventListener('input', (e) => {
             if (e.target === calcBalconyType || e.target === calcSquare || 
